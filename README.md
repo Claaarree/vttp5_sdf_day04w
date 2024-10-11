@@ -39,12 +39,15 @@ Once the client receives the cookie-text command, the client will strip the
 cookie-text prefix and displays the cookie in the console.
 The client can optionally get more cookies (by sending get-cookie
 command) or closes the connection with a close command.
-Command summary
+
+### Command summary
 • `get-cookie` - send by client to server; request the server to send a
 cookie
+
 • `cookie-text` - send by server to client in respond to a get-cookie.
 cookie-text is used to return a cookie to a client. The cookie text comes
 after the cookie-text command
+
 • `close` - send by client to server; request the server to close the connection
 
 ## Submission
