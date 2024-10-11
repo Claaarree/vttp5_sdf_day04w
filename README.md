@@ -1,16 +1,25 @@
 # Objective
 The objective of this workshop is to write a client/server fortune cookie
+
 ## Setup
 a. Create a repository in Github
+
 b. Clone the repository
+
 ## Workshop
+
 ### Task 1
 Write a fortune cookie server that will serve random cookie. The server is
 started as follows
+
 `java -cp fortunecookie.jar fc.Server 12345 cookie_file.txt`
+
 This will start the server; the server will now listen on port `12345` (TCP).
-`cookie_file.txt` is a file containing a list of ‘cookies’. This is a text file. The server
-will randomly return one cookie from this file.
+
+`cookie_file.txt` is a file containing a list of ‘cookies’. 
+
+This is a text file. The server will randomly return one cookie from this file.
+
 ### Task 2
 Write a separate class, `Cookie`, to manage the cookie file. All interactions
 with cookie should go through an instance of this class. Examples of interaction
@@ -32,9 +41,11 @@ following diagram
 The above diagram shows the interaction between the client and the server.
 After the client connects to the server the client will send a get-cookie
 command to the server.
+
 When the server receives the get-cookie, it will randomly select a cookie
 text from the cookie file. The cookie text will then be send back to the client.
 The cookie text will be prefixed with the command cookie-text.
+
 Once the client receives the cookie-text command, the client will strip the
 cookie-text prefix and displays the cookie in the console.
 The client can optionally get more cookies (by sending get-cookie
