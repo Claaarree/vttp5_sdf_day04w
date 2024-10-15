@@ -16,6 +16,7 @@ public class Client {
         String host = arg[0];
         int port = Integer.parseInt(arg[1]);
         System.out.println(host + String.valueOf(port));
+        
         Socket clientConn = new Socket(host, port);
 
         Console console = System.console();
